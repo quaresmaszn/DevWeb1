@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --text-span: regular 20px/1.5 'Inconsolata', sans-serif;
+
+  --text-title-lg: bold 56px/1.5 'Asap', sans-serif;
+  --text-title-md: bold 24px/1.5 'Asap', sans-serif;
+  --text-title-sm: bold 16px/1.5 'Asap', sans-serif;
+
+  --text-subtitle-md: regular  16px/1.5 'Maven Pro', sans-serif;
+  --text-subtitle-sm: regular 14px/1.5 'Maven Pro', sans-serif;
+
+}
+
+body {
+  font: Arial, sans-serif;
+  background-color: #0f0f11;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.header {
+  background-image: url(/img/capa/Background_Intro.svg);
+  
+}
+
+.header span {
+  font-family: var(--text-span);
+}
+
+.header h1 {
+  font: var(--text-title-lg);
+  color: #E2E4E9;
+}
+
+.header p {
+  font: var(--text-subtitle-sm);
+  color: #878EA1;
+}
+
+.tech {
+  font: var(--text-title-md);
+  color: #C0C4CE;
+}
+
+.body span {
+  font-family: var(--text-span);
+}
+
+.body h2 {
+  font: var(--text-title-md);
+}
+
+.body h3 {
+  font: var(--text-title-sm);
+  color: #E2E4E9;
+}
+
+.servicos 
+
+
+
+
+
+
+
+
+
+
+.tecnologias {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tecnologias span {
+  background: #1e1e1e;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Projetos */
+.projetos h3 span,
+.servicos h3 span,
+.contato h3 span {
+  color: #ff4c60;
+}
+
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h4 {
+  margin: 1rem;
+}
+
+.card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Serviços */
+.grid-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.box {
+  flex: 1 1 250px;
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.box:hover {
+  background: #292929;
+}
+
+.box h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* Contato */
+.contato .redes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contato .redes a {
+  text-decoration: none;
+  color: #fff;
+  background: #1e1e1e;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.contato .redes a:hover {
+  background: #292929;
+}
