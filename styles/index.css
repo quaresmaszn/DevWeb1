@@ -4,23 +4,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --bg-main: #16181D;
-  --bg-secondary: #0D0E11;
-  --bg-card: #292C34;
+  --color-background-main: #16181D;
+  --color-background-secondary: #0D0E11;
+  --color-background-card: #292C34;
 
-  --text-primary: #E2E4E9;
-  --text-secondary: #C0C4CE;
-  --text-tertiary: #878EA1;
+  --color-text-primary: #E2E4E9;
+  --color-text-secondary: #C0C4CE;
+  --color-text-tertiary: #878EA1;
 
-  --accent-rose: #E3646E;
-  --accent-purple: #BB72E9;
-  --accent-blue: #3996DB;
-  --accent-yellow: #EABD5F;
-  --accent-green: #82BC4F;
+  --color-accent-rose: #E3646E;
+  --color-accent-purple: #BB72E9;
+  --color-accent-blue: #3996DB;
+  --color-accent-yellow: #EABD5F;
+  --color-accent-green: #82BC4F;
 
-  --ff-sans-heading: "Asap", sans-serif;
-  --ff-sans-body: "Maven Pro", sans-serif;
-  --ff-mono: "Inconsolata", monospace;
+  --font-family-heading: "Asap", sans-serif;
+  --font-family-body: "Maven Pro", sans-serif;
+  --font-family-mono: "Inconsolata", monospace;
 }
 
 * {
@@ -30,25 +30,41 @@
 }
 
 body {
-  font-family: var(--ff-sans-body);
-  background-color: var(--bg-main);
-  color: var(--text-primary);
+  font-family: var(--font-family-body);
+  background-color: var(--color-background-main);
+  color: var(--color-text-primary);
   scrollbar-width: thin;
   scrollbar-color: #444 #1a1a1a;
 }
 
-.span {
-  font-family: var(--ff-mono);
+.meus-servicos {
+  font-family: var(--font-family-mono);
   font-size: 1.125rem;
-  color: var(--text-secondary);
+  color: #E3646E;
   line-height: 1.2;
   display: inline-block;
   margin-bottom: 0.625rem;
 }
 
-.span span {
-  color: var(--accent-rose);
-  font-weight: 700;
+.meu-trabalho {
+  font-family: var(--font-family-mono);
+  font-size: 20px;
+  color: #E3646E;
+  line-height: 1.2;
+  display: inline-block;
+  margin-bottom: 0.625rem;
+}
+
+
+.span {
+  font-family: var(--font-family-mono);
+  font-size: 20px;
+}
+
+.contato span {
+  font-family: var(--font-family-mono);
+  font-size: 20px;
+  color: var(--color-accent-purple);
 }
 
 .header {
@@ -57,6 +73,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("../img/capa/Background_Intro.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   gap: 1.25rem;
   text-align: center;
 }
@@ -69,7 +89,7 @@ body {
 }
 
 .header h1 {
-  font-family: var(--ff-sans-heading);
+  font-family: var(--font-family-heading);
   font-size: clamp(2.25rem, 5vw + 1rem, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
@@ -77,9 +97,14 @@ body {
 
 .header p {
   max-width: 680px;
-  font-size: 0.9375rem;
+  font-size: 14px;
   line-height: 1.4;
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
+
+}
+
+.nome-martina {
+  color: var(--color-accent-rose);
 }
 
 .tecnologias {
@@ -90,15 +115,19 @@ body {
   margin-top: 1.5rem;
 }
 
+.arrow {
+  margin-top: 100px;
+}
+
 .tech {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--bg-card);
+  background-color: var(--color-background-card);
   border-radius: 9999px;
   padding: 0.5rem 1.25rem;
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   user-select: none;
 }
 
@@ -108,16 +137,17 @@ body {
 }
 
 .projetos {
+  min-height: 100dvh;
   padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--bg-main);
+  background-color: var(--color-background-main);
 }
 
 .projetos h2 {
-  font-family: var(--ff-sans-heading);
-  font-size: 1.75rem;
+  font-family: var(--font-family-heading);
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -133,10 +163,10 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 0.75rem;
-  background-color: var(--bg-card);
-  border: 2px solid var(--bg-card);
+  background-color: var(--color-background-card);
+  border: 2px solid var(--color-background-card);
   border-radius: 10px;
   padding: 1rem;
   text-decoration: none;
@@ -144,7 +174,7 @@ body {
 }
 
 .card:hover {
-  border-color: var(--text-tertiary);
+  border-color: var(--color-text-tertiary);
 }
 
 .card img {
@@ -155,16 +185,16 @@ body {
 }
 
 .card h3 {
-  font-family: var(--ff-sans-heading);
+  font-family: var(--font-family-heading);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
 }
 
 .card p {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
 
 .servicos {
@@ -172,12 +202,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--bg-secondary);
+  background-color: var(--color-background-secondary);
 }
 
 .servicos h2 {
-  font-family: var(--ff-sans-heading);
-  font-size: 1.75rem;
+  font-family: var(--font-family-heading);
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -193,18 +223,18 @@ body {
 .box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 0.75rem;
-  background-color: var(--bg-card);
-  border: 2px solid var(--bg-card);
+  background-color: transparent;
+  border: 2px solid var(--color-background-card);
   border-radius: 10px;
   padding: 1.5rem;
   transition: border 0.2s ease-in-out;
-  text-align: center;
+  text-align: left;
 }
 
 .box:hover {
-  border-color: var(--accent-blue);
+  border-color: var(--color-accent-blue);
 }
 
 .box img {
@@ -213,29 +243,35 @@ body {
 }
 
 .box h3 {
-  font-family: var(--ff-sans-heading);
+  font-family: var(--font-family-heading);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
 }
 
 .box p {
   font-size: 0.875rem;
   line-height: 1.4;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
 
 .contato {
-  padding: 4rem 1rem 6rem;
+  min-height: 100dvh;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: var(--bg-main);
+  background-color: var(--color-background-main);
+  background-image: url("../img/capa/Background_Intro.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contato h2 {
-  font-family: var(--ff-sans-heading);
-  font-size: 1.75rem;
+  font-family: var(--font-family-heading);
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -244,7 +280,7 @@ body {
   max-width: 640px;
   font-size: 0.9375rem;
   line-height: 1.4;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   text-align: center;
 }
 
@@ -263,17 +299,17 @@ body {
   justify-content: space-between;
   gap: 0.75rem;
   text-decoration: none;
-  background-color: var(--bg-card);
-  border: 2px solid var(--bg-card);
+  background-color: var(--color-background-card);
+  border: 2px solid var(--color-background-card);
   border-radius: 10px;
   padding: 0.75rem 1.25rem;
   font-size: 1rem;
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
   transition: border 0.2s ease-in-out;
 }
 
 .redes a:hover {
-  border-color: var(--accent-blue);
+  border-color: var(--color-accent-blue);
 }
 
 .redes a img:first-child {
